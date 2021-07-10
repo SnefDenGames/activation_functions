@@ -7,14 +7,14 @@ This is the quellcode of an rust crate called:  `activation_functions`
 |**Contents**|
 |:-|
 |[Informations](#some-informations)|
-|Documentation [(GitHub)](#documentation) [(docs.rs)](https://docs.rs/activation_functions/0.1.0/activation_functions/)|
+|Documentation [(GitHub)](#documentation) [(docs.rs)](https://docs.rs/activation_functions/0.1.1/activation_functions/)|
 
 # Some informations:
 |**Name**|**Value**|
 |-|-|
 |Language|Rust|
 |Programer|SnefDen|
-|version|0.1.0|
+|version|0.1.1|
 |last update|10.07.2021|
 
 # Documentation
