@@ -19,14 +19,14 @@
 |               |**sigmoid**              |**binary step**      |**tanh**           |**rectified linear unit**|**sigmoid linear unit**|**gaussian**               |
 |:--------------|:-----------------------:|:-------------------:|:-----------------:|:-----------------------:|:---------------------:|:-------------------------:|
 |[**f32**](#f32)|[f32::sigmoid](#sigmoidx)|[f32::bstep](#bstepx)|[f32::tanh](#tanhx)|[f32::relu](#relux)      |[f32::silu](#silux)    |[f32::gaussian](#gaussianx)|
-|[**f64**](#f64)|[f64::sigmoid](#sigmoidy)|[f64::bstep](#bstepy)|[f64::tanh](#tanhy)|[f64::relu](#reluy)      |[f64::silu](#siluy)    |[f64::gaussian](#gaussiany)|
+|[**f64**](#f64)|[f64::sigmoid](#sigmoidx-1)|[f64::bstep](#bstepx-1)|[f64::tanh](#tanhx-1)|[f64::relu](#relux-1)      |[f64::silu](#silux-1)    |[f64::gaussian](#gaussianx-1)|
 
 # f32
 ## sigmoid(x):
-* [Informations](#informations-f32sigmoid)
-* [Example](#example-f32sigmoid)
-* [Implementation](#implementation-f32sigmoid)
-### Informations (f32::sigmoid):
+* [Informations](#informations)
+* [Example](#example)
+* [Implementation](#implementation)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -51,7 +51,7 @@ std::f32::consts::E.powf();
 let result:f32;     // float32
 
 ```
-### Example (f32::sigmoid):
+### Example:
 ```rust
 let x:f32   = 0.5;
 let answer  = sigmoid(x);
@@ -61,7 +61,7 @@ println!("sigmoid({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `sigmoid(0.5) => 0.62245935`
-### Implementation (f32::sigmoid):
+### Implementation:
 ```rust
 pub fn sigmoid(x:f32) -> f32 {
     1 as f32 / (1 as f32 + std::f32::consts::E.powf(-x))
@@ -69,10 +69,10 @@ pub fn sigmoid(x:f32) -> f32 {
 ```
 ___
 ## bstep(x):
-* [Informations](#informations-f32bstep)
-* [Example](#example-f32bstep)
-* [Implementation](#implementation-f32bstep)
-### Informations (f32::bstep):
+* [Informations](#informations-1)
+* [Example](#example-1)
+* [Implementation](#implementation-1)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -97,7 +97,7 @@ std::f32::consts::E.powf();
 let result:f32;     // float32
 
 ```
-### Example (f32::bstep):
+### Example:
 ```rust
 let x:f32   = 0.5;
 let answer  = bstep(x);
@@ -107,7 +107,7 @@ println!("bstep({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `bstep(0.5) => 1.0`
-### Implementation (f32::bstep):
+### Implementation:
 ```rust
 pub fn bstep(x:f32) -> f32 {
     if x<0 as f32 {
@@ -119,10 +119,10 @@ pub fn bstep(x:f32) -> f32 {
 ```
 ___
 ## tanh(x):
-* [Informations](#informations-f32tanh)
-* [Example](#example-f32tanh)
-* [Implementation](#implementation-f32tanh)
-### Informations (f32::tanh):
+* [Informations](#informations-2)
+* [Example](#example-2)
+* [Implementation](#implementation-2)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -147,7 +147,7 @@ std::f32::consts::E.powf();
 let result:f32;     // float32
 
 ```
-### Example (f32::tanh):
+### Example:
 ```rust
 let x:f32   = 0.5;
 let answer  = tanh(x);
@@ -157,7 +157,7 @@ println!("tanh({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `tanh(0.5) => 0.46211714`
-### Implementation (f32::tanh):
+### Implementation:
 ```rust
 pub fn tanh(x:f32) -> f32 {
     (std::f32::consts::E.powf(x) - std::f32::consts::E.powf(-x)) / (std::f32::consts::E.powf(x) + std::f32::consts::E.powf(-x))
@@ -165,10 +165,10 @@ pub fn tanh(x:f32) -> f32 {
 ```
 ___
 ## relu(x):
-* [Informations](#informations-f32relu)
-* [Example](#example-f32relu)
-* [Implementation](#implementation-f32relu)
-### Informations (f32::relu):
+* [Informations](#informations-3)
+* [Example](#example-3)
+* [Implementation](#implementation-3)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -193,7 +193,7 @@ std::f32::consts::E.powf();
 let result:f32;     // float32
 
 ```
-### Example (f32::relu):
+### Example:
 ```rust
 let x:f32   = 0.5;
 let answer  = relu(x);
@@ -203,7 +203,7 @@ println!("relu({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `relu(0.5) => 1.0`
-### Implementation (f32::tanh):
+### Implementation:
 ```rust
 pub fn relu(x:f32) -> f32 {
     if x<=0 as f32 {
@@ -215,10 +215,10 @@ pub fn relu(x:f32) -> f32 {
 ```
 ___
 ## silu(x):
-* [Informations](#informations-f32silu)
-* [Example](#example-f32silu)
-* [Implementation](#implementation-f32silu)
-### Informations (f32::silu):
+* [Informations](#informations-4)
+* [Example](#example-4)
+* [Implementation](#implementation-4)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -243,7 +243,7 @@ std::f32::consts::E.powf();
 let result:f32;     // float32
 
 ```
-### Example (f32::silu):
+### Example:
 ```rust
 let x:f32   = 0.5;
 let answer  = silu(x);
@@ -253,7 +253,7 @@ println!("silu({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `silu(0.5) => 0.31122968`
-### Implementation (f32::silu):
+### Implementation:
 ```rust
 pub fn silu(x:f32) -> f32 {
     x / (1 as f32 + std::f32::consts::E.powf(-x))
@@ -261,10 +261,10 @@ pub fn silu(x:f32) -> f32 {
 ```
 ___
 ## gaussian(x):
-* [Informations](#informations-f32gaussian)
-* [Example](#example-f32gaussian)
-* [Implementation](#implementation-f32gaussian)
-### Informations (f32::gaussian):
+* [Informations](#informations-5)
+* [Example](#example-5)
+* [Implementation](#implementation-5)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -289,7 +289,7 @@ std::f32::consts::E.powf();
 let result:f32;     // float32
 
 ```
-### Example (f32::gaussian):
+### Example:
 ```rust
 let x:f32   = 0.5;
 let answer  = gaussian(x);
@@ -299,7 +299,7 @@ println!("gaussian({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `gaussian(0.5) => 0.7788008`
-### Implementation (f32::gaussian):
+### Implementation:
 ```rust
 pub fn gaussian(x:f32) -> f32 {
     std::f32::consts::E.powf(-(x*x))
@@ -307,12 +307,11 @@ pub fn gaussian(x:f32) -> f32 {
 ```
 ___
 # f64
-
-## sigmoid(y):
-* [Informations](#informations-f64sigmoid)
-* [Example](#example-f64sigmoid)
-* [Implementation](#implementation-f64sigmoid)
-### Informations (f64::sigmoid):
+## sigmoid(x):
+* [Informations](#informations-6)
+* [Example](#example-6)
+* [Implementation](#implementation-6)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -337,7 +336,7 @@ std::f64::consts::E.powf();
 let result:f64;     // float64
 
 ```
-### Example (f64::sigmoid):
+### Example:
 ```rust
 let x:f64   = 0.5;
 let answer  = sigmoid(x);
@@ -347,18 +346,18 @@ println!("sigmoid({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `sigmoid(0.5) => 0.62245935`
-### Implementation (f64::sigmoid):
+### Implementation:
 ```rust
 pub fn sigmoid(x:f64) -> f64 {
     1 as f64 / (1 as f64 + std::f64::consts::E.powf(-x))
 }
 ```
 ___
-## bstep(y):
-* [Informations](#informations-f64bstep)
-* [Example](#example-f64bstep)
-* [Implementation](#implementation-f64bstep)
-### Informations (f64::bstep):
+## bstep(x):
+* [Informations](#informations-7)
+* [Example](#example-7)
+* [Implementation](#implementation-7)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -383,7 +382,7 @@ std::f64::consts::E.powf();
 let result:f64;     // float64
 
 ```
-### Example (f64::bstep):
+### Example:
 ```rust
 let x:f64   = 0.5;
 let answer  = bstep(x);
@@ -393,7 +392,7 @@ println!("bstep({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `bstep(0.5) => 1.0`
-### Implementation (f64::bstep):
+### Implementation:
 ```rust
 pub fn bstep(x:f64) -> f64 {
     if x<0 as f64 {
@@ -404,11 +403,11 @@ pub fn bstep(x:f64) -> f64 {
 }
 ```
 ___
-## tanh(y):
-* [Informations](#informations-f64tanh)
-* [Example](#example-f64tanh)
-* [Implementation](#implementation-f64tanh)
-### Informations (f64::tanh):
+## tanh(x):
+* [Informations](#informations-8)
+* [Example](#example-8)
+* [Implementation](#implementation-8)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -433,7 +432,7 @@ std::f64::consts::E.powf();
 let result:f64;     // float64
 
 ```
-### Example (f64::tanh):
+### Example:
 ```rust
 let x:f64   = 0.5;
 let answer  = tanh(x);
@@ -443,18 +442,18 @@ println!("tanh({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `tanh(0.5) => 0.46211714`
-### Implementation (f64::tanh):
+### Implementation:
 ```rust
 pub fn tanh(x:f64) -> f64 {
     (std::f64::consts::E.powf(x) - std::f64::consts::E.powf(-x)) / (std::f64::consts::E.powf(x) + std::f64::consts::E.powf(-x))
 }
 ```
 ___
-## relu(y):
-* [Informations](#informations-f32relu)
-* [Example](#example-f32relu)
-* [Implementation](#implementation-f32relu)
-### Informations (f32::relu):
+## relu(x):
+* [Informations](#informations-9)
+* [Example](#example-9)
+* [Implementation](#implementation-9)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -479,7 +478,7 @@ std::f32::consts::E.powf();
 let result:f32;     // float32
 
 ```
-### Example (f32::relu):
+### Example:
 ```rust
 let x:f32   = 0.5;
 let answer  = relu(x);
@@ -489,7 +488,7 @@ println!("relu({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `relu(0.5) => 1.0`
-### Implementation (f32::tanh):
+### Implementation:
 ```rust
 pub fn relu(x:f32) -> f32 {
     if x<=0 as f32 {
@@ -500,11 +499,11 @@ pub fn relu(x:f32) -> f32 {
 }
 ```
 ___
-## silu(y):
-* [Informations](#informations-f64silu)
-* [Example](#example-f64silu)
-* [Implementation](#implementation-f64silu)
-### Informations (f64::silu):
+## silu(x):
+* [Informations](#informations-10)
+* [Example](#example-10)
+* [Implementation](#implementation-10)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -529,7 +528,7 @@ std::f64::consts::E.powf();
 let result:f64;     // float64
 
 ```
-### Example (f64::silu):
+### Example:
 ```rust
 let x:f64   = 0.5;
 let answer  = silu(x);
@@ -539,18 +538,18 @@ println!("silu({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `silu(0.5) => 0.31122968`
-### Implementation (f64::silu):
+### Implementation:
 ```rust
 pub fn silu(x:f64) -> f64 {
     x / (1 as f64 + std::f64::consts::E.powf(-x))
 }
 ```
 ___
-## gaussian(y):
-* [Informations](#informations-f64gaussian)
-* [Example](#example-f64gaussian)
-* [Implementation](#implementation-f64gaussian)
-### Informations (f64::gaussian):
+## gaussian(x):
+* [Informations](#informations-11)
+* [Example](#example-11)
+* [Implementation](#implementation-11)
+### Informations:
 #### Parameter:
 ```rust
 // variable stands for parameter
@@ -575,7 +574,7 @@ std::f64::consts::E.powf();
 let result:f64;     // float64
 
 ```
-### Example (f64::gaussian):
+### Example:
 ```rust
 let x:f64   = 0.5;
 let answer  = gaussian(x);
@@ -585,7 +584,7 @@ println!("gaussian({}) => {}",x,answer);
 that would print out the answer and the given x-value in this format
 
 `gaussian(0.5) => 0.7788008`
-### Implementation (f64::gaussian):
+### Implementation:
 ```rust
 pub fn gaussian(x:f64) -> f64 {
     std::f64::consts::E.powf(-(x*x))
