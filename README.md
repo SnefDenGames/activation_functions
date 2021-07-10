@@ -1,4 +1,7 @@
-![Activation Functions](https://cdn.discordapp.com/attachments/749301198099841114/863353727192924170/GitHub_PageBanner.png)
+# Activation Functions
+
+### Description:
+This is the quellcode of an rust crate called:  `activation_functions`
 
 # Table of Contents
 |**Contents**|
